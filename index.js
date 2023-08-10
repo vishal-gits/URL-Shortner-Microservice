@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const url = require("url");
+const dns = require("dns");
 const mongoose = require("mongoose");
 const urlModel = require("./db");
 
@@ -37,10 +38,25 @@ app.post("/api/shorturl", (req, res) => {
   let inputUrl;
   const validUrl = (url) => {
     try {
-      new URL(url);
-      return true;
+      if (new URL(url)) {
+        console.log("p1");
+        if (url.startsWith("https://") || url.startsWith("http://")) {
+          console.log("p2");
+          return true;
+        } else {
+          res.status(200).json({ error: "invalid url" });
+        }
+      }
+
+      // if (new URL(url)
+      //   (url.startsWith("https://") || url.startsWith("http://"))
+      // ) {
+      //   return true;
+      // }
+      // new URL(url);
+      // return true;
     } catch (err) {
-      res.status(400).json({ error: "invalid url" });
+      res.status(200).json({ error: "invalid url" });
       return false;
     }
   };
