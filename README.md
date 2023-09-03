@@ -1,13 +1,18 @@
-# URL Shortener Microservice
+### Project details - URL Shortner Microservice
 
-## Completed Project Link - https://github.com/vishal-gits/URL-Shortner-Microservice
+Its a url shortner microservice that provides a JSON output for api requests on particular url, providing its
 
-This is the boilerplate code for the URL Shortener Microservice project. Instructions for building your project can be found at https://www.freecodecamp.org/learn/back-end-development-and-apis/back-end-development-and-apis-projects/url-shortener-microservice.
+1. original url.
+2. shortened url
 
-You should provide your own project, not the example URL.
+### Project Live Link - https://url-shortner-microservice.vishal-gits.repl.co/
 
-### You can POST a URL to /api/shorturl and get a JSON response with original_url and short_url properties. Here's an example: { original_url : 'https://freeCodeCamp.org', short_url : 1}
+This is a certification project of "FCC Backend Development And APIs Projects"
 
-### When you visit /api/shorturl/<short_url>, you will be redirected to the original URL.
+on "Free Code Camp" https://www.freecodecamp.org/
 
-### If you pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain { error: 'invalid url' }
+The Requirements of the project are stated in the below link
+
+https://www.freecodecamp.org/learn/back-end-development-and-apis/back-end-development-and-apis-projects/url-shortener-microservice
+
+### A full stack Javascript app built using NodeJS,Express and MongoDB and Mongoose for database.
